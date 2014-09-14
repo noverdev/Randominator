@@ -34,7 +34,12 @@ namespace Randominator
             for (int i = 0; i <= b; i++)
             {
                 Random RandomNumber1 = new Random();
-                 c = RandomNumber1.Next(a, b);
+                 if (a < b)
+                {
+                    c = RandomNumber1.Next(a, b);
+                }
+                else 
+                 c = RandomNumber1.Next(b, a);
             }
             textBox3.Text = c.ToString();
         }
